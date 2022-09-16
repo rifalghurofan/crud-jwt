@@ -3,7 +3,7 @@ const User = require("../models/user");
 const db = require("../models");
 require('dotenv').config();
 
-var bcrypt = require("bcrypt");
+var bcrypt = require("bcryptjs");
 const salt = bcrypt.genSaltSync(8);
 const rol = ['63181084a943464608078cb8'];
 

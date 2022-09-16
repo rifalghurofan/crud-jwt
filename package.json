@@ -4,7 +4,7 @@
   "description": "- Anda diminta membuat 4 tabel, yaitu `Clients`, `Brands`, `Users`, dan `Roles`.  \r     - Tugas Anda diminta untuk membuat CRUD yang membuat, membaca, mengedit, dan menghapus `3` dari `4` table tersebut,\r       yaitu `Clients`, `Brands` dan `Users`.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node ./app/seeders/userSeed.js"
   },
@@ -13,7 +13,7 @@
     "url": "git+https://gitlab.com/andalan-solusi-cemerlang/internship/authentication-and-authorization.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "rifal ghurofan",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/andalan-solusi-cemerlang/internship/authentication-and-authorization/issues"

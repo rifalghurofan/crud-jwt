@@ -1,6 +1,6 @@
 const User = require("../models/user");
 const Role = require("../models/role");
-var bcrypt = require("bcrypt");
+var bcrypt = require("bcryptjs");
 const check = require('joi');
 const { role } = require("../models");
 

@@ -2,7 +2,7 @@ const config = require("../config/auth");
 const User = require("../models/user");
 const check = require('joi'); 
 var jwt = require("jsonwebtoken");
-var bcrypt = require("bcrypt");
+var bcrypt = require("bcryptjs");
 
 //signup
 const signup = async (req, res, err) => {
@@ -19,7 +19,7 @@ const signup = async (req, res, err) => {
   
   const pass = req.body.password;
   const salt = bcrypt.genSaltSync(8);
-  const defaultRole = ['63181084a943464608078cba'];
+  const defaultRole = ['6322d41027f2b3024cf6a03d'];
   const user = new User({
     username: req.body.username,
     email: req.body.email,
@@ -76,7 +76,6 @@ const signin = async (req, res, err) => {
       });
       //preview roles
       const authorities = user.roles[0].name;
-
       res.header('Access_Token',token).status(200).send({
         id: user._id,
         username: user.username,
