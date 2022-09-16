@@ -6,6 +6,9 @@ const jwt = require("jsonwebtoken");
 const passport = require("passport");
 
 module.exports = function(app) {
+  app.get("/", (req, res)=>{
+    res.send("dashboard");
+  });
   app.post(
     "/api/signup",
     [
