@@ -64,27 +64,24 @@ const signin = async (req, res, err) => {
       password,
       user.password
       ); 
-      if (!IsValid) {
-        return res.status(401).send({
-          Access_Token: null,
-          message: "Invalid Password!"
-        });
-      }
-      //set a token
-      var token = jwt.sign({ id: user.id, role: user.roles }, config.secret, {
-        expiresIn: "1h" // 24 hours
-      });
-      //preview roles
-      const authorities = user.roles[0].name;
-      res.header('Access_Token',token).status(200).send({
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        roles: authorities,
-        token: "Bearer" + token
-      });
-    }); 
-  }
+    if (!IsValid) {
+      return res.status(401).send({message: "Invalid Password!"});
+    }
+    //set a token
+    var token = jwt.sign({ id: user.id, role: user.roles }, config.secret, {
+      expiresIn: "1h" // 24 hours
+    });
+    //preview roles
+    const authorities = user.roles[0].name;
+    res.header('Access-Token', "Bearer " + token).status(200).send({
+      id: user._id,
+      username: user.username,
+      email: user.email,
+      roles: authorities,
+      token: "Bearer " + token
+    });
+  }); 
+}
   module.exports={
     signup,
     signin

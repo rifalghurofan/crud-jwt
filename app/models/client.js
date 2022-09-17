@@ -3,14 +3,15 @@ const Client = mongoose.model(
   "Client",
   new mongoose.Schema({
     namaClient: String,
-    brand_id: [
+    member_id: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Brand"
+        ref: "User"
       }
     ]
-  }, {collection:'Client',
-  versionKey: false
-})
+  }, {
+    collection: 'Client',
+    versionKey: false
+  })
 );
 module.exports = Client;

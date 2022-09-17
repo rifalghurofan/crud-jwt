@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node ./app/seeders/userSeed.js"
+    "seed": "node ./app/seeders/userSeed.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
+    "bearer-token-parser": "^1.0.3",
     "body-parser": "^1.20.0",
     "connect-ensure-login": "^0.1.1",
     "cors": "^2.8.5",
