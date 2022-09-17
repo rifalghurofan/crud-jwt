@@ -81,7 +81,7 @@ const signin = async (req, res, err) => {
         username: user.username,
         email: user.email,
         roles: authorities,
-        Access_Token: token
+        token: "Bearer" + token
       });
     }); 
   }
