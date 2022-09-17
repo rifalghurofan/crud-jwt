@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sample Site</title>
+    <title>CRUD-JWT</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
@@ -17,7 +17,54 @@
 
     <div class="container">
         <div class="jumbotron">
-            <h1>res.sendFile() Works!</h1>
+            <h1>CRUD-JWT</h1>
+        </div>
+        <div class="jumbotron">
+            <h3>signup/signin</h3>
+            <b>/api/signup</b><br>
+            <h3>read user</h3>
+            <b>
+                /api/super/user<br>
+                /api/admin/user<br>
+                /api/member/user<br>
+            </b>
+
+            <h3>crud user</h3>
+            <b>
+                /api/super/createUser<br>
+                /api/admin/createUser<br>
+                /api/super/updateUser/:id<br>
+                /api/admin/updateUser/:id<br>
+                /api/super/deleteUser<br>
+            </b>
+
+            <h3>read client</h3>
+            <b>
+                /api/super/client<br>
+                /api/admin/client<br>
+                /api/member/client<br>
+            </b>
+
+            <h3>member crud client</h3>
+            <b>
+                /api/member/createClient<br>
+                /api/member/updateClient/:id<br>
+                /api/member/deleteClient<br>
+            </b>
+
+            <h3>read brand</h3>
+            <b>
+                /api/super/brand<br>
+                /api/admin/brand<br>
+                /api/member/brand<br>
+            </b>
+
+            <h3>member crud brand</h3>
+            <b>
+                /api/member/createBrand<br>
+                /api/member/updateBrand/:id<br>
+                /api/member/deleteBrand<br>
+            </b>
         </div>
     </div>
 
